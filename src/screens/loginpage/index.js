@@ -23,7 +23,7 @@ const handleSignup = () =>{
 return (
     <View style={styles.container}>
         <Image
-            source={require('../../assets//logo.png')}
+            source={require('../../../assets//logo.png')}
             style={[styles.image,{marginTop:50}]}
             />
         <Text style={styles.loginSignupText}>Sign Up/Sign In</Text>

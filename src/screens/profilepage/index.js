@@ -3,6 +3,19 @@ import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 const ProfilePage = ({ userName, userPoints }) => {
+  const navigation = useNavigation();
+  const navigateToTasks = () => {
+    navigation.navigate("TasksPage");
+  };
+  const navigateToEvents = () => {
+    navigation.navigate("EventsPage");
+  };
+  const navigateToRewards = () => {
+    navigation.navigate("RewardsPage");
+  };
+  const navigateToCommunity = () => {
+    navigation.navigate("CommunityPage");
+  };
   return (
     <View style={styles.container}>
       {/* Circle */}
@@ -16,22 +29,22 @@ const ProfilePage = ({ userName, userPoints }) => {
       {/* Buttons */}
       <View style={styles.buttonContainer}>
         <View style={styles.buttonRow}>
-          <TouchableOpacity style={styles.button}>
-            <Image source={require('../../assets/tasks.png')} style={styles.buttonImage} />
+          <TouchableOpacity style={styles.button} onPress={navigateToTasks}>
+            <Image source={require('../../../assets/tasks.png')} style={styles.buttonImage} />
             <Text style={styles.title}>TASKS</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.button}>
-            <Image source={require('../../assets/events.png')} style={styles.buttonImage} />
+          <TouchableOpacity style={styles.button} onPress={navigateToEvents}>
+            <Image source={require('../../../assets/events.png')} style={styles.buttonImage} />
             <Text style={styles.title}>EVENTS</Text>
           </TouchableOpacity>
         </View>
         <View style={styles.buttonRow}>
-          <TouchableOpacity style={styles.button}>
-            <Image source={require('../../assets/rewards.png')} style={styles.buttonImage} />
+          <TouchableOpacity style={styles.button} onPress={navigateToRewards}>
+            <Image source={require('../../../assets/rewards.png')} style={styles.buttonImage} />
             <Text style={styles.title}>REWARDS</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.button}>
-            <Image source={require('../../assets/community.png')} style={styles.buttonImage} />
+          <TouchableOpacity style={styles.button} onPress={navigateToCommunity}>
+            <Image source={require('../../../assets/community.png')} style={styles.buttonImage} />
             <Text style={styles.title}>COMMUNITY</Text>
           </TouchableOpacity>
         </View>

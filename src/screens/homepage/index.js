@@ -12,7 +12,7 @@ const HomePage = () => {
     return (
         <View style={styles.container}>
             <Image
-            source={require('../../assets//logo.png')}
+            source={require('../../../assets/logo.png')}
             style={[styles.image,{marginTop:100}]}
             />
             <View>

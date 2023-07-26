@@ -1,8 +1,12 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import HomePage from './screens/homepage';
-import LoginPage from './screens/loginpage';
-import ProfilePage from './screens/profilepage';
+import HomePage from './src/screens/homepage';
+import LoginPage from './src/screens/loginpage';
+import ProfilePage from './src/screens/profilepage';
+import TaskPage from './src/screens/tasks';
+import RewardsPage from './src/screens/rewards';
+import EventsPage from './src/screens/events';
+import CommunityPage from './src/screens/community';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
@@ -25,6 +29,18 @@ export default function App() {
             }}
            />
           <Stack.Screen name="ProfilePage" component={ProfilePage} options={{
+            headerShown: false,
+          }}/>
+          <Stack.Screen name="TasksPage" component={TaskPage} options={{
+            headerShown: false,
+          }}/>
+          <Stack.Screen name="EventsPage" component={EventsPage} options={{
+            headerShown: false,
+          }}/>
+          <Stack.Screen name="RewardsPage" component={RewardsPage} options={{
+            headerShown: false,
+          }}/>
+          <Stack.Screen name="CommunityPage" component={CommunityPage} options={{
             headerShown: false,
           }}/>
         </Stack.Navigator>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 
 const TaskPage = () => {
   return (
@@ -12,10 +12,10 @@ const TaskPage = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#FEF6E6',
     alignItems: 'center',
     justifyContent: 'center',
   },
 });
 
-export default EmptyPage;
+export default TaskPage;
