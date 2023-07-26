@@ -2,6 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import HomePage from './screens/homepage';
 import LoginPage from './screens/loginpage';
+import ProfilePage from './screens/profilepage';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
@@ -23,6 +24,9 @@ export default function App() {
               headerShown: false, // Hide the header for the home page
             }}
            />
+          <Stack.Screen name="ProfilePage" component={ProfilePage} options={{
+            headerShown: false,
+          }}/>
         </Stack.Navigator>
         <StatusBar style="auto" />
       </View>
